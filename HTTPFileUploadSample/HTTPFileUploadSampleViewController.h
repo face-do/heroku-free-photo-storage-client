@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "HTTPFileUpload.h"
 
-@interface HTTPFileUploadSampleViewController : UIViewController <HTTPFileUploadDelegate>
+@interface HTTPFileUploadSampleViewController : UIViewController <HTTPFileUploadDelegate, UITextFieldDelegate>
 {
+    IBOutlet UITextField *codeTextField;
+    IBOutlet UIImageView *_imageView;
 }
 
 - (IBAction)postButtonClicked:(id)sender;
+- (IBAction)showCameraSheet:(id)sender;
+@property (retain, nonatomic) IBOutlet UITextField *codeTextField;
+
 @end
